@@ -17,6 +17,8 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+		
+		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="save" href="../user/login">Login</a></a></li>
@@ -24,7 +26,7 @@
 				<li><a class="save" href="../user/logout">logout</a></a></li>
 			</ul>
 		</div>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+
 		<g:layoutBody/>
 
 		<div class="footer" role="contentinfo"></div>
