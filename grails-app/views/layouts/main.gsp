@@ -20,7 +20,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="save" href="../user/login">Login</a></a></li>
-				<li><a class="save" href="../user/create">Create User</a></a></li>
+				<li><a class="save" href="../user/create">Criar Usuario</a></a></li>
 				<li><a class="save" href="../user/logout">logout</a></a></li>
 			</ul>
 		</div>
