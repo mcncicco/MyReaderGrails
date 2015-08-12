@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'entrys', 'error')} ">
+<!-- div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'entrys', 'error')} ">
 	<label for="entrys">
 		<g:message code="feed.entrys.label" default="Entrys" />
 		
@@ -18,7 +18,7 @@
 </ul>
 
 
-</div>
+</div -->
 
 <div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'nome', 'error')} required">
 	<label for="nome">
@@ -43,7 +43,7 @@
 		<g:message code="feed.user.label" default="User" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="user" name="user.id" from="${br.ufpe.cin.User.list()}" optionKey="id" required="" value="${feedInstance?.user?.id}" class="many-to-one"/>
+	<g:select id="user" name="user.id" from="${session.user}" optionKey="id" required="" value="${feedInstance?.user?.id}" class="many-to-one"/>
 
 </div>
 

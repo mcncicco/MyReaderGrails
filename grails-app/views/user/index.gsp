@@ -13,6 +13,7 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				
 			</ul>
 		</div>
 		<div id="list-user" class="content scaffold-list" role="main">
@@ -29,9 +30,11 @@
 						<g:sortableColumn property="nome" title="${message(code: 'user.nome.label', default: 'Nome')}" />
 					
 						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />
+
+						<th></th><th></th>
 					
 					</tr>
-					<th></th><th></th>
+					
 				</thead>
 				<tbody>
 				<g:each in="${userInstanceList}" status="i" var="userInstance">

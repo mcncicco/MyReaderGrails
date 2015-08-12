@@ -11,8 +11,13 @@ class FeedController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Feed.list(params), model:[feedInstanceCount: Feed.count()]
+        if(session.user != null){
+            params.max = Math.min(max ?: 10, 100)
+            respond Feed.list(params), model:[feedInstanceCount: Feed.count()]
+        }else{
+            session.user = null
+            redirect(controller:"user", action:"login")
+        }
     }
 
     def show(Feed feedInstance) {

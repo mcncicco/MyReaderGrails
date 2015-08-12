@@ -11,8 +11,14 @@ class EntryController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Entry.list(params), model:[entryInstanceCount: Entry.count()]
+        if(session.user != null){
+            params.max = Math.min(max ?: 10, 100)
+            respond Entry.list(params), model:[entryInstanceCount: Entry.count()]
+        }else{
+            session.user = null
+            redirect(controller:"user", action:"login")
+        }
+        
     }
 
     def show(Entry entryInstance) {

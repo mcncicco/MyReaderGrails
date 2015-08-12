@@ -29,9 +29,11 @@
 						<g:sortableColumn property="nome" title="${message(code: 'entry.nome.label', default: 'Nome')}" />
 					
 						<g:sortableColumn property="url" title="${message(code: 'entry.url.label', default: 'Url')}" />
+
+						<th></th><th></th>
 					
 					</tr>
-					<th></th><th></th>
+					
 				</thead>
 				<tbody>
 				<g:each in="${entryInstanceList}" status="i" var="entryInstance">

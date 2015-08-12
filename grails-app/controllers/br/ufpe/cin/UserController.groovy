@@ -10,9 +10,35 @@ class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def login = {}
+
+    def authenticate = {
+
+        def user = User.findByEmailAndPassword(params.email, params.password)
+            if(user){
+              session.user = user
+              flash.message = "Hello ${user.nome}!"
+              redirect(controller:"user", action:"index")
+            }else{
+              flash.message = "Sorry, ${params.email}. Please try again."
+              redirect(action:"login")
+            }
+    }
+
+    def logout = {
+        session.user = null
+        redirect(controller:"user", action:"login")
+    }
+
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond User.list(params), model:[userInstanceCount: User.count()]
+
+        if(session.user != null){
+            params.max = Math.min(max ?: 10, 100)
+            respond User.list(params), model:[userInstanceCount: User.count()]
+        }else{
+            session.user = null
+            redirect(controller:"user", action:"login")
+        }
     }
 
     def show(User userInstance) {

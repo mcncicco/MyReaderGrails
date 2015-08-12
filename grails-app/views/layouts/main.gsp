@@ -17,9 +17,18 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="save" href="../user/login">Login</a></a></li>
+				<li><a class="save" href="../user/create">Create User</a></a></li>
+				<li><a class="save" href="../user/logout">logout</a></a></li>
+			</ul>
+		</div>
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
 		<g:layoutBody/>
+
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+
 	</body>
 </html>

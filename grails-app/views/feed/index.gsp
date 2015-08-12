@@ -29,9 +29,11 @@
 						<g:sortableColumn property="url" title="${message(code: 'feed.url.label', default: 'Url')}" />
 					
 						<th><g:message code="feed.user.label" default="User" /></th>
+
+						<th></th><th></th>
 					
 					</tr>
-					<th></th><th></th>
+					
 				</thead>
 				<tbody>
 				<g:each in="${feedInstanceList}" status="i" var="feedInstance">
