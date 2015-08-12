@@ -35,10 +35,13 @@ class FeedController {
             return
         }
 
+        
+
         if (feedInstance.hasErrors()) {
             respond feedInstance.errors, view:'create'
             return
         }
+
 
         feedInstance.save flush:true
 

@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'user', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'user', 'error')} required not">
 	<label for="user">
 		<g:message code="feed.user.label" default="User" />
 		<span class="required-indicator">*</span>
