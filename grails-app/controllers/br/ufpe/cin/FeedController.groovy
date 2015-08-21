@@ -13,6 +13,7 @@ class FeedController {
     def index(Integer max) {
         if(session.user != null){
             params.max = Math.min(max ?: 10, 100)
+            
             respond Feed.list(params), model:[feedInstanceCount: Feed.count()]
         }else{
             session.user = null

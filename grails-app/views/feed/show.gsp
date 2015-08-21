@@ -60,8 +60,32 @@
 					
 				</li>
 				</g:if>
+				<%
+
+// A variável "url" irá receber o endereço do feed...
+
+def url = feedInstance.url
+
+// Na variável "rss" o xml do feed é lido...
+
+def rss = new XmlSlurper().parse(url) 
+
+// Agora os objetos do xml (feed) estão acessíveis...
+
+%>
+
+<h1>${rss.channel.title}</h1>
+
+<% rss.channel.item.each { %>
+
+<h2><a href="${it.link}">${it.title}</a></h2>
+
+<p>${it.description}</p>
+
+<% } %>
 			
 			</ol>
+
 			<g:form url="[resource:feedInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
 					<g:link class="edit" action="edit" resource="${feedInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
@@ -69,5 +93,6 @@
 				</fieldset>
 			</g:form>
 		</div>
+
 	</body>
 </html>

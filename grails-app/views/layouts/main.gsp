@@ -21,9 +21,17 @@
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="save" href="../user/login">Login</a></a></li>
-				<li><a class="save" href="../user/create">Criar Usuario</a></a></li>
-				<li><a class="save" href="../user/logout">logout</a></a></li>
+				<g:if test="${session.user == null}">
+					<li><a class="save" href="../user/login">Login</a></a></li>
+					<li><a class="save" href="../user/create">Criar Usuario</a></a></li>
+				</g:if>
+				<g:else>
+					<li><a class="save" href="../user/logout">logout</a></a></li>
+					<li>Bem vindo, ${session.user.nome}</li>
+				</g:else>
+
+				
+				
 			</ul>
 		</div>
 

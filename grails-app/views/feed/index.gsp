@@ -37,31 +37,33 @@
 				</thead>
 				<tbody>
 				<g:each in="${feedInstanceList}" status="i" var="feedInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${feedInstance.id}">${fieldValue(bean: feedInstance, field: "nome")}</g:link></td>
-					
-						<td>${fieldValue(bean: feedInstance, field: "url")}</td>
-					
-						<td>${fieldValue(bean: feedInstance, field: "user")}</td>
-					
-
-					<td>
-						    <g:form url="[resource:feedInstance, action:'update']" method="PUT">
-						        <fieldset class="buttons">
-						            <g:actionSubmit class="update" action="edit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-						        </fieldset>
-						    </g:form>
-						</td>
+					<g:if test="${feedInstance.user.id == session.user.id}">
+						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						
+							<td><g:link action="show" id="${feedInstance.id}">${fieldValue(bean: feedInstance, field: "nome")}</g:link></td>
+						
+							<td>${fieldValue(bean: feedInstance, field: "url")}</td>
+						
+							<td>${fieldValue(bean: feedInstance, field: "user")}</td>
+						
 
 						<td>
-						    <g:form url="[resource:feedInstance, action:'delete']" method="DELETE">
-						        <fieldset class="buttons">
-						            <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-						        </fieldset>
-						    </g:form>
-						</td>
-					</tr>
+							    <g:form url="[resource:feedInstance, action:'update']" method="PUT">
+							        <fieldset class="buttons">
+							            <g:actionSubmit class="update" action="edit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+							        </fieldset>
+							    </g:form>
+							</td>
+
+							<td>
+							    <g:form url="[resource:feedInstance, action:'delete']" method="DELETE">
+							        <fieldset class="buttons">
+							            <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+							        </fieldset>
+							    </g:form>
+							</td>
+						</tr>
+					</g:if>
 				</g:each>
 				</tbody>
 			</table>
