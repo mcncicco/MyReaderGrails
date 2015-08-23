@@ -1,0 +1,29 @@
+a:link, a:visited, a:hover {
+    color: #990000;
+}
+
+.footer {
+    background: #990000 none repeat scroll 0% 0%;
+    color: #000;
+    clear: both;
+    font-size: 0.8em;
+    margin-top: 1.5em;
+    padding: 1em;
+    min-height: 1em;
+}
+
+#grailsLogo {
+    background-color: #990000;
+}
+
+h1 {
+    color: #990000;
+    font-weight: normal;
+    font-size: 1.25em;
+    margin: 0.8em 0px 0.3em;
+}
+
+.white {
+    color: #FFFFFF;
+    text-decoration: none;
+}
