@@ -26,22 +26,19 @@
 		<div id="grailsLogo" role="banner" align="center"><a href=".."><asset:image src="logo.png" alt="MyReader" title="MyReader"/></a><h4 class='text-center white'><i class="fa fa-leanpub"></i> Leitor de feed de notícias no formato RSS. Um "substituto" ao Google Reader.</h4>
 		<br />
 		</div>		
-		<!--<p class='text-center'><a href='..'><img src="/assets/logo.png" alt="MyReader" title='MyReader' /></a></p>-->
+		<!--<p class='text-center'><a href='..'><img src="/assets/logo.png" alt="MyReader" title='MyReader' /></a></p>
 		<div class="nav" role="navigation">
 			<ul>
 				<g:if test="${session.user == null}">
-					<li><a class="save" href="../user/login">Login</a></a></li>
-					<li><a class="save" href="../user/create">Criar Usuario</a></a></li>
+					<li><a class="save" href="user/login">Login</a></a></li>
+					<li><a class="save" href="user/create">Criar Usuario</a></a></li>
 				</g:if>
 				<g:else>
 					<li><a class="save" href="../user/logout">logout</a></a></li>
 					<li>Bem vindo, ${session.user.nome}</li>
-				</g:else>
-
-				
-				
+				</g:else>								
 			</ul>
-		</div>
+		</div>-->
 
 		<g:layoutBody/>
 

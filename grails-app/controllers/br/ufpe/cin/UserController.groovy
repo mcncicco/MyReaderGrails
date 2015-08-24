@@ -20,7 +20,7 @@ class UserController {
               flash.message = "Hello ${user.nome}!"
               redirect(controller:"feed", action:"index")
             }else{
-              flash.message = "Sorry, ${params.email}. Please try again."
+              flash.message = "Email e/ou senha incorreto(s)!"
               redirect(action:"login")
             }
     }

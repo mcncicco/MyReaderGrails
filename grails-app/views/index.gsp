@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		
-		<title>Welcome to Grails</title>
+		<title>Bem-vindo ao MyReader</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -82,9 +82,10 @@
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>		
 		<div id="status" role="complementary">
-			<h1>Application Status</h1>
+			<br /><p align="center"><i class="fa fa-5x fa-smile-o red"></i></p><br /><br />
+			<!--<h1>Application Status</h1>
 			<ul>
 				<li>App version: <g:meta name="app.version"/></li>
 				<li>Grails version: <g:meta name="app.grails.version"/></li>
@@ -101,20 +102,17 @@
 				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
 					<li>${plugin.name} - ${plugin.version}</li>
 				</g:each>
-			</ul>
+			</ul>-->
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+			<h1><strong>Bem-vindo ao MyReader</strong></h1>
+			<p><i class="fa fa-hand-o-right"></i> Um leitor de feed de notícias no formato RSS. Um "substituto" ao Google Reader.</p><hr />
 
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Controllers Disponíveis:</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.shortName}</g:link></li>
 					</g:each>
 				</ul>
 			</div>

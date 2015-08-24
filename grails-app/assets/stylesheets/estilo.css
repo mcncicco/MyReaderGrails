@@ -1,5 +1,6 @@
 a:link, a:visited, a:hover {
     color: #990000;
+    text-decoration: none;
 }
 
 .footer {
@@ -16,11 +17,26 @@ a:link, a:visited, a:hover {
     background-color: #990000;
 }
 
+html {
+	background: url("grid.png");
+    /*background-color: #DDD;
+    background-image: -moz-linear-gradient(center top , #AAA, #DDD);
+    background-repeat: no-repeat;
+    height: 100%;
+    box-sizing: border-box;
+    */
+}
+
 h1 {
     color: #990000;
     font-weight: normal;
     font-size: 1.25em;
     margin: 0.8em 0px 0.3em;
+}
+
+.red {
+    color: #990000;
+    text-decoration: none;
 }
 
 .white {
