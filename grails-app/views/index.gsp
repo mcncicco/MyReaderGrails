@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
+		<meta http-equiv="refresh" content="0; url=http://localhost:8080/MyReaderGrails/feed/" />
 		
 		<title>Bem-vindo ao MyReader</title>
 		<style type="text/css" media="screen">
