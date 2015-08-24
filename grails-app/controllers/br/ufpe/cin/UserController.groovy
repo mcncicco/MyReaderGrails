@@ -60,17 +60,24 @@ class UserController {
             respond userInstance.errors, view:'create'
             return
         }
+        def user = User.findByEmail(params.email)
+            
+            if(user){
+                flash.message = "Email já cadastrado!"
+                redirect(controller:"user", action:"create")
+              
+            }else{
+              userInstance.save flush:true
 
-        userInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'Usuario'), userInstance.id])
-                session.user = null
-                redirect(controller:"user", action:"login")
+                request.withFormat {
+                    form multipartForm {
+                        flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'Usuario'), userInstance.id])
+                        session.user = null
+                        redirect(controller:"user", action:"login")
+                    }
+                    '*' { respond userInstance, [status: CREATED] }
+                }
             }
-            '*' { respond userInstance, [status: CREATED] }
-        }
     }
 
     def edit(User userInstance) {
