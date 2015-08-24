@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		
-		<title>Bem-vindo ao MyReader</title>
+		<title>MyReader</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;

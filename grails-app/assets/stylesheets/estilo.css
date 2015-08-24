@@ -3,9 +3,33 @@ a:link, a:visited, a:hover {
     text-decoration: none;
 }
 
+.buttons input, .buttons a {
+    background-color: transparent;
+    border: 0px none;
+    color: #990000;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0px 0.25em;
+    overflow: visible;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    border-radius: 0.3em;
+}
+
+.buttons input:hover, .buttons input:focus,
+.buttons a:hover, .buttons a:focus {
+    background-color: #990000;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+       -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
 .footer {
     background: #990000 none repeat scroll 0% 0%;
-    color: #000;
+    color: #000000;
     clear: both;
     font-size: 0.8em;
     margin-top: 1.5em;
@@ -15,6 +39,13 @@ a:link, a:visited, a:hover {
 
 #grailsLogo {
     background-color: #990000;
+}
+
+h1 {
+    color: #990000;
+    font-weight: normal;
+    font-size: 1.25em;
+    margin: 0.8em 0px 0.3em;
 }
 
 html {
@@ -27,16 +58,51 @@ html {
     */
 }
 
-h1 {
-    color: #990000;
-    font-weight: normal;
-    font-size: 1.25em;
-    margin: 0.8em 0px 0.3em;
+.nav a {
+    background-color: #EEA236;
+    color: #FFFFFF;
+    display: block;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+       -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+            border-radius: 0.3em;
+}
+
+.nav a:active, .nav a:visited {
+    color: #FFFFFF;
+}
+
+.nav a:focus, .nav a:hover {
+    background-color: #EEA236;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 .red {
     color: #990000;
     text-decoration: none;
+}
+
+.save {
+    background-color: #990000;
+    border: 1px solid #990000;
+    font-size: 1em;
+    padding: 0.2em 0.4em;
+    color: #FFFFFF;
+}
+
+.save:focus {
+    background-color: #FFFFFF;
+    border: 1px solid #990000;
+    outline: 0px none;
+    box-shadow: 0px 0px 0.5em #FFFFFF;
+    color: #990000;
+}
+
+th:hover, tr:hover {
+	background: #EFEFEF;
 }
 
 .white {

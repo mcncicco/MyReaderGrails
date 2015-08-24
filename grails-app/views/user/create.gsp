@@ -7,11 +7,11 @@
 	</head>
 	<body>
 		<a href="#create-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+		<!--<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 			</ul>
-		</div>
+		</div>-->
 		<div id="create-user" class="content scaffold-create" role="main">
 			<h1><strong><i class="fa fa-user"></i> Cadastrar Usuário</strong></h1>
 			<g:if test="${flash.message}">
@@ -30,6 +30,7 @@
 				</fieldset>
 				<fieldset>
 					<g:submitButton name="create" class="save" value="Criar minha conta :)" />
+					&nbsp;&nbsp;&nbsp;<a class="home" href="${createLink(uri: '/user/login')}"><i class="fa fa-ban"></i> Cancelar</a>
 				</fieldset>
 			</g:form>
 		</div>

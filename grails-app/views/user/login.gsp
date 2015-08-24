@@ -36,7 +36,7 @@
         <div>
           <span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="save" type="submit" value="Entrar" />
-            &nbsp;&nbsp;&nbsp;<a class="edit" href="../user/create"><i class="fa fa-edit"></i> Cadastre-se!</a>
+            &nbsp;&nbsp;&nbsp;<a class="edit" href="${createLink(uri: '/user/create')}"><i class="fa fa-edit"></i> Cadastre-se!</a>
           </span>
         </div>
       </g:form>

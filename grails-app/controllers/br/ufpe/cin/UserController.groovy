@@ -17,7 +17,7 @@ class UserController {
         def user = User.findByEmailAndPassword(params.email, params.password)
             if(user){
               session.user = user
-              flash.message = "Hello ${user.nome}!"
+              flash.message = "Olá ${user.nome}!"
               redirect(controller:"feed", action:"index")
             }else{
               flash.message = "Email e/ou senha incorreto(s)!"
@@ -65,7 +65,7 @@ class UserController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+                flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'Usuario'), userInstance.id])
                 session.user = null
                 redirect(controller:"user", action:"login")
             }

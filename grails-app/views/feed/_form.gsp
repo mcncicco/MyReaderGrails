@@ -22,7 +22,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: feedInstance, field: 'nome', 'error')} required">
 	<label for="nome">
-		<g:message code="feed.nome.label" default="Nome" />
+		Título
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="nome" required="" value="${feedInstance?.nome}"/>

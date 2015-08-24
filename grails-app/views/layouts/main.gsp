@@ -23,7 +23,7 @@
 	</head>
 	<body>
 
-		<div id="grailsLogo" role="banner" align="center"><a href=".."><asset:image src="logo.png" alt="MyReader" title="MyReader"/></a><h4 class='text-center white'><i class="fa fa-leanpub"></i> Leitor de feed de notícias no formato RSS. Um "substituto" ao Google Reader.</h4>
+		<div id="grailsLogo" role="banner" align="center"><a href="${createLink(uri: '/feed/index')}"><asset:image src="logo.png" alt="MyReader" title="MyReader"/></a><h4 class='text-center white'><i class="fa fa-leanpub"></i> Leitor de feed de notícias no formato RSS. Um "substituto" ao Google Reader.</h4>
 		<br />
 		</div>		
 		<!--<p class='text-center'><a href='..'><img src="/assets/logo.png" alt="MyReader" title='MyReader' /></a></p>

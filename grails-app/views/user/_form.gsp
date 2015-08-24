@@ -43,6 +43,6 @@
 		Senha
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="password" required="" value="${userInstance?.password}"/>
+	<g:passwordField name="password" required="" value="${userInstance?.password}"/>
 
 </div>
