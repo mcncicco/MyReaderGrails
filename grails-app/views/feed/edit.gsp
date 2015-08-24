@@ -17,7 +17,7 @@
 		</div>
 		<p align="right"><a href="${createLink(uri: '/user/logout')}"><i class="fa fa-sign-out"></i> SAIR</a>&nbsp;</p>		
 		<div id="edit-feed" class="content scaffold-edit" role="main">
-			<h1><strong>> <g:message code="default.edit.label" args="[entityName]" /></strong></h1>
+			<h1><strong>> Editar Feed</strong></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -34,7 +34,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset>
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Editar')}" />
 					&nbsp;&nbsp;&nbsp;<a class="edit" href="${createLink(uri: '/feed/index')}"><i class="fa fa-ban"></i> Cancelar</a>
 				</fieldset>
 			</g:form>

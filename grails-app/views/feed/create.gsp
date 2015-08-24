@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'feed.label', default: 'Feed')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title>MyReader | Adicionar Feed</title>
 	</head>
 	<body>
 		<a href="#create-feed" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

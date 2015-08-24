@@ -79,9 +79,9 @@ def rss = new XmlSlurper().parse(url)
 
 <% rss.channel.item.each { %>
 
-<h3 align="justify"><a href="${it.link}">${it.title}</a></h3>
+<h3 align="justify"><i class="fa fa-globe"></i> <a href="${it.link}" target="_blank">${it.title}</a></h3><br />
 
-<p align="justify"><small>${it.description}</small></p>
+<!--<p align="justify"><small>${it.description}</small></p>-->
 
 <% } %>
 			
@@ -89,8 +89,8 @@ def rss = new XmlSlurper().parse(url)
 
 			<g:form url="[resource:feedInstance, action:'delete']" method="DELETE">
 				<fieldset>
-					<g:link class="edit" action="edit" resource="${feedInstance}"><i class="fa fa-edit"></i> Alterar</g:link>
-					&nbsp;&nbsp;&nbsp;<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					<g:link class="edit" action="edit" resource="${feedInstance}"><i class="fa fa-edit"></i> Editar</g:link>
+					&nbsp;&nbsp;&nbsp;<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Excluir')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Deseja realmente excluir?')}');" />
 				</fieldset>
 			</g:form>
 		</div>

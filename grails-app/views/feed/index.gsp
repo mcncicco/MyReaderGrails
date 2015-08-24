@@ -15,7 +15,7 @@
 				<li><g:link action="create"><i class="fa fa-plus white"></i> Adicionar Feed</g:link></li>
 			</ul>
 		</div>
-		<p align="right"><a href="${createLink(uri: '/user/logout')}"><i class="fa fa-sign-out"></i> SAIR</a>&nbsp;</p>
+		<p align="right"><a href="../user/show/${session.user.id}"><i class="fa fa-user"></i> Meu Perfil</a> | <a href="${createLink(uri: '/user/logout')}"><i class="fa fa-sign-out"></i> SAIR</a>&nbsp;</p>
 		<div id="list-feed" class="content scaffold-list" role="main">
 			<h1><strong><i class="fa fa-rss"></i> Meus Feeds</strong></h1>
 			<g:if test="${flash.message}">
@@ -51,7 +51,7 @@
 						<td>
 							    <g:form url="[resource:feedInstance, action:'update']" method="PUT">
 							        <fieldset class="buttons">
-							            <g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+							            <g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.update.label', default: 'Editar')}" />
 							        </fieldset>
 							    </g:form>
 							</td>
@@ -59,7 +59,7 @@
 							<td>
 							    <g:form url="[resource:feedInstance, action:'delete']" method="DELETE">
 							        <fieldset class="buttons">
-							            <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+							            <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Excluir')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Deseja realmente excluir?')}');" />
 							        </fieldset>
 							    </g:form>
 							</td>
