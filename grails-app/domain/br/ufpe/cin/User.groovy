@@ -14,7 +14,7 @@ class User {
     }
 
     static mapping = {
-         categoria lazy:false
+         //categoria lazy:false
     }
 
 }

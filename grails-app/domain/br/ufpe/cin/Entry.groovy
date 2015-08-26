@@ -14,7 +14,7 @@ class Entry {
     }
 
     static mapping = {
-         categoria lazy:false
+         //categoria lazy:false
     }
 
 }

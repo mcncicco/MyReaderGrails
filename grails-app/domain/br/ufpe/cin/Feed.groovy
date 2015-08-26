@@ -15,7 +15,7 @@ class Feed {
     }
 
     static mapping = {
-         categoria lazy:false
+         //categoria lazy:false
     }
 
 }
