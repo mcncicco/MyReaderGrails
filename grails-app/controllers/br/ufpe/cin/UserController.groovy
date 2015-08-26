@@ -14,7 +14,7 @@ class UserController {
 
     def authenticate = {
 
-        def user = null 
+        def user = User.findByEmailAndPassword(params.email, params.password)
             if(user){
               session.user = user
               flash.message = "Olá ${user.nome}!"
@@ -60,8 +60,13 @@ class UserController {
             respond userInstance.errors, view:'create'
             return
         }
-
-        
+        def user = User.findByEmail(params.email)
+            
+            if(user){
+                flash.message = "Email já cadastrado!"
+                redirect(controller:"user", action:"create")
+              
+            }else{
               userInstance.save flush:true
 
                 request.withFormat {
@@ -72,7 +77,7 @@ class UserController {
                     }
                     '*' { respond userInstance, [status: CREATED] }
                 }
-            
+            }
     }
 
     def edit(User userInstance) {
