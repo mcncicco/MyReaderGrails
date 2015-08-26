@@ -14,7 +14,7 @@ class UserController {
 
     def authenticate = {
 
-        def user = User.findByEmailAndPassword(params.email, params.password)
+        def user = null 
             if(user){
               session.user = user
               flash.message = "Olá ${user.nome}!"
@@ -60,6 +60,7 @@ class UserController {
             respond userInstance.errors, view:'create'
             return
         }
+
         def user = User.findByEmail(params.email)
             
             if(user){
