@@ -61,7 +61,7 @@ class UserController {
             return
         }
 
-        def user = User.findByEmail(params.email)
+        def user = null
             
             if(user){
                 flash.message = "Email já cadastrado!"
